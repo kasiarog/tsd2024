@@ -9,6 +9,8 @@ class Program
     {
         Console.WriteLine("Hello, Gold Investor!");
 
+        // Task 1. - sufficient
+        Console.WriteLine("\n/////// Task 1 - sufficient ///////");
         // Step 1: Get gold prices
         GoldDataService dataService = new GoldDataService();
         DateTime startDate = new DateTime(2019,01,01);
@@ -100,6 +102,38 @@ class Program
         GoldResultPrinter.PrintSingleValue($"{Math.Round(returnOfInvestment, 2)} %", "Return of investment: ");
 
         Console.WriteLine("\nGold Analyis Queries with LINQ Completed.");
+
+
+        // Task 2. - satisfactory
+        Console.WriteLine("\n/////// Task 2 - satisfactory ///////");
+
+        Task2 task2 = new Task2();
+        int year = 2004;
+        Console.WriteLine($"Is {year} a leap year? - {task2.isLeapYear(year)}");
+        year = 1234;
+        Console.WriteLine($"Is {year} a leap year? - {task2.isLeapYear(year)}");
+        year = 3000;
+        Console.WriteLine($"Is {year} a leap year? - {task2.isLeapYear(year)}\n");
+
+        // c.
+        Console.WriteLine($"Czy lista jest pusta? {task2.IsEmpty}");
+
+        // a.
+        Console.WriteLine("... Dodawanie elementów do listy. ...");
+        task2.Add(1234);
+        task2.Add("Hello world");
+        task2.Add("Hello world 2");
+        task2.Add(12.34);
+        task2.Add(1);
+        task2.Add(2);
+        task2.Add(3);
+
+        // b.
+        Console.WriteLine($"Czy lista jest pusta? {task2.IsEmpty}");
+
+        // c.
+        var randomElement = task2.Get<object>(3);
+        Console.WriteLine($"Losowy element: {randomElement}");
 
     }
 }
