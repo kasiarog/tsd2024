@@ -6276,4 +6276,12 @@
     <Date>2025-03-19T00:00:00</Date>
     <Price>371.14</Price>
   </GoldPrice>
+  <GoldPrice>
+    <Date>2025-03-20T00:00:00</Date>
+    <Price>374.5</Price>
+  </GoldPrice>
+  <GoldPrice>
+    <Date>2025-03-21T00:00:00</Date>
+    <Price>377.78</Price>
+  </GoldPrice>
 </ArrayOfGoldPrice>

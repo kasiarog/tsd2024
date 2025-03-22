@@ -64,7 +64,7 @@ namespace GoldSavings.App.Services
             var targetDays = new List<GoldPrice>();
             foreach (var price in januaryPrices) {
                 var days = _goldPrices
-                    .Where(p => p.Price >= price.Price * 1.05)
+                    .Where(p => p.Price >= price.Price * 1.05 && p.Date > price.Date)
                     .ToList();
                 targetDays.AddRange(days);
             }
